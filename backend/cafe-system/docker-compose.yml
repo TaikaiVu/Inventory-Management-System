@@ -1,0 +1,84 @@
+version: '3.8'
+name: 'cafe-system'
+
+services:
+  api-gateway:
+    image: api-gateway
+    ports:
+      - "8080:8080"
+    build:
+      context: ./api-gateway
+      dockerfile: ./Dockerfile
+    container_name: api-gateway
+    networks:
+      - spring
+
+  discovery-service:
+    image: discovery-service
+    ports:
+      - "8761:8761"
+    build:
+      context: ./discovery-service
+      dockerfile: ./Dockerfile
+    container_name: discovery-service
+    networks:
+      - spring
+
+#  inventory-service:
+#    image: inventory-service
+#    ports:
+#      - "8180:8180"
+#    build:
+#      context: ./inventory-service
+#      dockerfile: ./Dockerfile
+#    container_name: inventory-service
+#    networks:
+#      - spring
+
+  sell-service:
+    image: sell-service
+    ports:
+      - "8280:8280"
+    build:
+      context: ./sell-service
+      dockerfile: ./Dockerfile
+    container_name: sell-service
+    networks:
+      - spring
+
+  notification-service:
+    image: notification-service
+    ports:
+      - "8680:8680"
+    build:
+      context: ./notification-service
+      dockerfile: ./Dockerfile
+    container_name: notification-service
+    networks:
+      - spring
+
+  security-service:
+    image: security-service
+    ports:
+      - "8480:8480"
+    build:
+      context: ./security-service
+      dockerfile: ./Dockerfile
+    container_name: security-service
+    networks:
+      - spring
+
+  inventory-service:
+    image: inventory-service
+    ports:
+      - "8180:8180"
+    build:
+      context: ./inventory-service
+      dockerfile: ./Dockerfile
+    container_name: inventory-service
+    networks:
+      - spring
+
+networks:
+  spring:
+    driver: bridge
