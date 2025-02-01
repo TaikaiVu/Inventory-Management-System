@@ -20,11 +20,11 @@ Each **microserices ** are designed to be interacted with each other during the 
 2. Database
 - PostgreSQL
   
-4. Security
+3. Security
 - Spring Security
 - JWT-based Authentication
 - BCrypt Password Encoding
    
-5. Infrastructure
+4. Infrastructure
 - Docker
    
