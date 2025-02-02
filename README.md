@@ -1,7 +1,7 @@
 **Inventory Management System**
 
 The back end code for Inventory Management System specifically designed for Pastry restaurant. 
-Each **microserices ** are designed to be interacted with each other during the use of the application:
+Each microservices are designed to be interacted with each other during the use of the application:
 - **API Gateway:** Microservice that acts as a central entry point for managing, routing, and securing API requests to multiple backend microservices and performs Reverse Proxy & Load Balancing, Authentication & Security (JWT-Based), API Gateway Routing, Request Validation & Filtering
 - **Discovery Service:** Microservice that acts as a Service Registry using Eureka Server. Its main purpose is to manage and track all microservices in your system, enabling service discovery and dynamic load balancing.
 - **Inventory Service:** Microservice that acts as a central part of an inventory management system, which manages product batches and types, handling everything from record creation to monitoring inventory levels.
